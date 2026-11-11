@@ -8,7 +8,12 @@
   "observability": { "enabled": true },
   // Database and KV namespace are created for you on first deploy.
   "d1_databases": [{ "binding": "DB", "database_name": "threshold" }],
-  "kv_namespaces": [{ "binding": "OAUTH_KV" }],
+  "kv_namespaces": [
+  {
+    "binding": "OAUTH_KV",
+    "id": "e80ea1ab038a4254b989003f2efee2dd"
+  }
+],
   // Refresh recent days, backfill history, and decode FIT files in small steps.
   "triggers": { "crons": ["*/10 * * * *"] },
   // Keep settings you change in the dashboard (TIMEZONE, PLAN, ...) when a new version deploys.
